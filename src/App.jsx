@@ -309,7 +309,7 @@ function App() {
               </div>
             ) : (
               <p className="placeholder-text">
-                Selecciona un tema en el menú lateral para comenzar
+                Selecciona un tema en el menú para comenzar
               </p>
             )}
           </div>
