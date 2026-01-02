@@ -18,6 +18,7 @@ function App() {
   const [puntuacion, setPuntuacion] = useState(0)
   const [respondido, setRespondido] = useState(false)
   const [esCorrecto, setEsCorrecto] = useState(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   // Mapeo de datos según el tema
   const datosTema = {
@@ -55,6 +56,10 @@ function App() {
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   const reintentar = () => {
     setRespondido(false);
     setEsCorrecto(null);
@@ -81,13 +86,16 @@ function App() {
   return (
     <div className="app-container">
       <header className="main-header">
-        <h1 className="header-title">Aprende Ortografía con los Clásicos</h1>
-        <p className="header-subtitle">Cervantes, Bécquer, Unamuno y más ...</p>
-        <p className="header-author">Autor: Luis Corona alcantar (lca1643@gmail.com)</p>
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Menu">
+          {isMenuOpen ? '✕' : '☰'}
+        </button>
+        <h1 className="header-title">ABC Ortografía</h1>
+        <p className="header-subtitle">Cervantes, Bécquer, Unamuno...</p>
+        <p className="header-author">Luis Corona</p>
       </header>
 
       <div className="content-body">
-        <aside className="sidebar">
+        <aside className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
           <button
             className="menu-btn btn-home"
             title="Inicio"

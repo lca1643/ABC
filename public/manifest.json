@@ -1,0 +1,16 @@
+{
+    "name": "ABC Ortografía con los Clásicos",
+    "short_name": "ABC Ortografía",
+    "description": "Aprende ortografía española con citas de autores clásicos.",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#FDF6E3",
+    "theme-color": "#F7E7CE",
+    "icons": [
+        {
+            "src": "vite.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

@@ -104,6 +104,19 @@ body {
   text-align: center;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1001;
+}
+
 /* Content Body (Sidebar + Workspace) */
 .content-body {
   display: flex;
@@ -550,5 +563,138 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* --- Responsive Design --- */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-header {
+    min-height: 100px;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .header-title {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .header-author {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .workspace-container {
+    padding: 0;
+  }
+
+  .workspace-card {
+    padding: 1.25rem;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .workspace-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .theory-section {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .theory-card {
+    min-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .example-selector {
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    justify-content: flex-start;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+  }
+
+  .example-btn {
+    white-space: nowrap;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .pergamino-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .cita-literaria {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .referencia-literaria {
+    font-size: 0.9rem;
+  }
+
+  .justificacion-box {
+    font-size: 0.85rem;
+  }
+
+  .exercise-pregunta {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .option-btn {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .placeholder-text {
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
   }
 }
