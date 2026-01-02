@@ -167,6 +167,13 @@ function App() {
           >
             Uso de los Dos Puntos
           </button>
+
+          <button
+            className={`menu-btn btn-info ${temaSeleccionado === 'Información' ? 'active' : ''}`}
+            onClick={() => cambiarTema('Información')}
+          >
+            ℹ️ Información
+          </button>
         </aside>
 
         <main
@@ -306,6 +313,36 @@ function App() {
                     </div>
                   )}
                 </section>
+              </div>
+            ) : temaSeleccionado === 'Información' ? (
+              <div className="info-view">
+                <div className="info-card">
+                  <h2>Sobre la Aplicación</h2>
+
+                  <div className="info-item">
+                    <span className="info-label">Autor</span>
+                    <span className="info-value">Luis Corona Alcantar</span>
+                  </div>
+
+                  <div className="info-item">
+                    <span className="info-label">Correo de contacto</span>
+                    <span className="info-value">lca1643@gmail.com</span>
+                  </div>
+
+                  <div className="info-item">
+                    <span className="info-label">Versión</span>
+                    <span className="info-value">1.0.0-Beta</span>
+                  </div>
+
+                  <div className="info-item">
+                    <span className="info-label">Tecnología</span>
+                    <span className="info-value">React + Vite + Vanilla CSS</span>
+                  </div>
+
+                  <div className="info-footer">
+                    <p>Web App diseñada para el aprendizaje dinámico de la ortografía española a través de la literatura clásica.</p>
+                  </div>
+                </div>
               </div>
             ) : (
               <p className="placeholder-text">

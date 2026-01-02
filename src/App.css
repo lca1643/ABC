@@ -39,6 +39,9 @@
   --btn-cyan: #E0F2F1;
   --btn-cyan-hover: #B2DFDB;
 
+  --btn-info: #ECEFF1;
+  --btn-info-hover: #CFD8DC;
+
   --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   --border-radius-lg: 12px;
 }
@@ -271,6 +274,15 @@ body {
 
 .btn-dospuntos:hover {
   background-color: var(--btn-cyan-hover);
+}
+
+.btn-info {
+  background-color: var(--btn-info);
+  border: 1px dashed rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-info:hover {
+  background-color: var(--btn-info-hover);
 }
 
 /* Workspace */
@@ -564,6 +576,56 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* --- Info View Styles --- */
+.info-view {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.info-card {
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-card);
+  border-left: 8px solid #607D8B;
+}
+
+.info-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.info-item {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #90A4AE;
+  letter-spacing: 1px;
+}
+
+.info-value {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+.info-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #EEE;
+  font-style: italic;
+  color: var(--color-text-secondary);
 }
 
 /* --- Responsive Design --- */
