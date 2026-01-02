@@ -81,6 +81,7 @@ function App() {
     setEjercicioActivo(0);
     setRespondido(false);
     setEsCorrecto(null);
+    setIsMenuOpen(false);
   };
 
   return (
