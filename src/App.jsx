@@ -87,7 +87,7 @@ function App() {
     <div className="app-container">
       <header className="main-header">
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Menu">
-          {isMenuOpen ? '✕' : '☰'}
+          ☰
         </button>
         <h1 className="header-title">ABC Ortografía</h1>
         <p className="header-subtitle">Cervantes, Bécquer, Unamuno...</p>
@@ -168,7 +168,10 @@ function App() {
           </button>
         </aside>
 
-        <main className="workspace-container">
+        <main
+          className="workspace-container"
+          onClick={() => isMenuOpen && setIsMenuOpen(false)}
+        >
           <div className="workspace-card">
             {unidadActual ? (
               <div className="study-view">
