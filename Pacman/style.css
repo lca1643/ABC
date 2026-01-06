@@ -1,0 +1,73 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+    /* Oro/Amarillo Pacman */
+}
+
+#score {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+canvas {
+    background-color: black;
+    border: 4px solid #191970;
+    /* Azul medianoche para las paredes */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+/* Pantalla de inicio superpuesta */
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    z-index: 10;
+    width: 280px;
+}
+
+#start-button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#start-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+#start-screen p {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    color: #aaa;
+}

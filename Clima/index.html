@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Dashboard | Antigravity Learning</title>
+    <!-- Fuente Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <main class="app-container">
+        <!-- Buscador -->
+        <header class="search-section">
+            <input type="text" id="city-input" placeholder="Busca una ciudad (ej. Madrid)..." spellcheck="false">
+            <button id="search-btn">🔍</button>
+        </header>
+
+        <div class="weather-column">
+            <!-- Contenido Principal -->
+            <section class="weather-content" id="weather-display">
+                <div class="main-info">
+                    <div id="date-time">-- : -- : --</div>
+                    <h1><span id="city-name">Selecciona una ciudad</span> <span id="country-tag"></span></h1>
+                    <p id="weather-desc">El clima a tu alcance</p>
+                    <div class="temp-container">
+                        <span id="temperature">--</span><span class="unit">°C</span>
+                    </div>
+                </div>
+
+                <!-- Detalles Secundarios -->
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <span class="icon">💧</span>
+                        <div class="info">
+                            <small>Humedad</small>
+                            <strong id="humidity">--%</strong>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <span class="icon">💨</span>
+                        <div class="info">
+                            <small>Viento</small>
+                            <strong id="wind">-- km/h</strong>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <span class="icon">☀️</span>
+                        <div class="info">
+                            <small>Índice UV</small>
+                            <strong id="uv-index">--</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="map-column">
+            <!-- NUEVO: Mapa -->
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="author-footer-minimal">
+        Autor: Luis Corona Alcantar | Contacto: lca1643@gmail.com | Dashboard Meteorológico | V1.0
+    </footer>
+
+    <!-- Script de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
